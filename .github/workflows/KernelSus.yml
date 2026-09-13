@@ -36,4 +36,6 @@ jobs:
           aosp-clang-version: r596125
 
           extra-make-args: LLVM=1 LLVM_IAS=1
-          anykernel3: false
+          anykernel3: true
+          anykernel3-url: https://github.com/muralivijay/AnyKernel3
+          extra-make-args: LLVM=1 LLVM_IAS=1
