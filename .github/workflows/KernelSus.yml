@@ -1,4 +1,3 @@
-# A simple action usage
 name: Build KernelSus spes 4.19 BPF
 on:
   workflow_dispatch:
