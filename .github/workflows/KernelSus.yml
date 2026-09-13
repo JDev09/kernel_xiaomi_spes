@@ -1,32 +1,33 @@
-name: Build Kernel spes 4.19 BPF KernelSU
+# A simple action usage
+name: Build KernelSus spes 4.19 BPF
 on:
-workflow_dispatch:
-push:
-branches:
-- main-a16-sm8250-base
+  workflow_dispatch:
+  push:
+    branches:
+      - main-a16-sm8250-base
 
 jobs:
-Build-Kernel:
-strategy:
-fail-fast: false
-runs-on: ubuntu-latest
-permissions:
-contents: read
+  Build-Kernel:
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
-steps:  
-  - name: Build Kernel spes 4.19 BPF  
-    uses: dabao1955/kernel_build_action@main  
-    with:  
-      kernel-url: https://github.com/JDev09/kernel_xiaomi_spes  
-      kernel-dir: msm-4.19  
-      kernel-branch: main-a16-sm8250-base  
-      config: vendor/spes-perf_defconfig  
-      arch: arm64  
-      aosp-gcc: true  
-      aosp-clang: true  
-      ksu-other: true  
-      ksu-url: https://github.com/KernelSU-Next/KernelSU-Next  
-      aosp-clang-version: r596125  
-      anykernel3: true  
-      anykernel3-url: https://github.com/muralivijay/AnyKernel3  
-      extra-make-args: LLVM=1 LLVM_IAS=1
+    steps:
+      - name: Build Kernel spes 4.19 BPF
+        uses: dabao1955/kernel_build_action@main
+        with:
+          kernel-url: https://github.com/JDev09/kernel_xiaomi_spes
+          kernel-dir: msm-4.19
+          kernel-branch: main-a16-sm8250-base
+          config: vendor/spes-perf_defconfig
+          arch: arm64
+          aosp-gcc: true
+          aosp-clang: true
+          ksu-other: false
+          ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
+          aosp-clang-version: r596125
+          anykernel3: true
+          anykernel3-url: https://github.com/muralivijay/AnyKernel3
+          extra-make-args: LLVM=1 LLVM_IAS=1
