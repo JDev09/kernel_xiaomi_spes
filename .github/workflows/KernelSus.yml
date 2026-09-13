@@ -28,5 +28,5 @@ jobs:
           ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
           aosp-clang-version: r596125
           anykernel3: true
-          anykernel3-url: https://github.com/JDev09/AnyKernel3/blob/master/anykernel.sh
+          anykernel3-url: https://github.com/JDev09/AnyKernel3
           extra-make-args: LLVM=1 LLVM_IAS=1
