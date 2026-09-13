@@ -1,4 +1,4 @@
-name: Build Kernel spes 4.19 BPF
+name: Build Kernel+SUS spes 4.19 BPF
 on:
   workflow_dispatch:
   push:
