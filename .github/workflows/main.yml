@@ -18,7 +18,7 @@ jobs:
       - name: Build Kernel spes 4.19 BPF
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/muralivijay/kernel_xiaomi_spes/
+          kernel-url: https://github.com/JDev09/kernel_xiaomi_spes
           kernel-dir: msm-4.19
           kernel-branch: main-a16-sm8250-base
           config: vendor/spes-perf_defconfig
