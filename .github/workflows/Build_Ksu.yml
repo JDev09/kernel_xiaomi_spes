@@ -1,17 +1,13 @@
 name: Build Kernel spes 4.19 BPF + KernelSU Next
 
-on:
+"on":
 workflow_dispatch:
-
 push:
 branches:
 - main-a16-sm8250-base
 
 jobs:
 Build-Kernel:
-strategy:
-fail-fast: false
-
 runs-on: ubuntu-latest
 
 permissions:
@@ -26,20 +22,11 @@ steps:
       kernel-branch: main-a16-sm8250-base
       config: vendor/spes-perf_defconfig
       arch: arm64
-
-      # Toolchains
       aosp-gcc: true
       aosp-clang: true
       aosp-clang-version: r596125
-
-      # KernelSU Next
       ksu-other: true
       ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
-      ksu-lkm: false
-
-      # AnyKernel3
       anykernel3: true
       anykernel3-url: https://github.com/JDev09/AnyKernel3
-
-      # LLVM
       extra-make-args: LLVM=1 LLVM_IAS=1
