@@ -36,10 +36,10 @@ jobs:
           aosp-clang: true
           aosp-clang-version: r596125
 
-          # =========================
+                   # =========================
           # KernelSU-Next
           # =========================
-          ksu: false
+          ksu: true
           ksu-other: true
           ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
           ksu-version: main
