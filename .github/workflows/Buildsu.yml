@@ -1,4 +1,5 @@
-name: Build KernelSU spes/n 4.19 BPF
+# A simple action usage
+name: Build Kernel spes 4.19 BPF
 on:
   workflow_dispatch:
   push:
@@ -17,7 +18,7 @@ jobs:
       - name: Build Kernel spes 4.19 BPF
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/JDev09/kernel_xiaomi_spes
+          kernel-url: https://github.com/JDev09/kernel_xiaomi_spes.git
           kernel-dir: msm-4.19
           kernel-branch: main-a16-sm8250-base
           config: vendor/spes-perf_defconfig
@@ -28,5 +29,5 @@ jobs:
           ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
           aosp-clang-version: r596125
           anykernel3: true
-          anykernel3-url: https://github.com/JDev09/AnyKernel3
-          extra-make-args: LLVM=1 LLVM_IAS=1
+          anykernel3-url: https://github.com/JDev09/AnyKernel3.git
+          extra-cmd: LLVM=1 LLVM_IAS=1
