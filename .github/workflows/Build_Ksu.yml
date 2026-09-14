@@ -2,6 +2,7 @@ name: Build Kernel spes 4.19 BPF + KernelSU Next
 
 on:
 workflow_dispatch:
+
 push:
 branches:
 - main-a16-sm8250-base
