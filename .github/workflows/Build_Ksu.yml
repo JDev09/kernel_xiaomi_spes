@@ -24,7 +24,6 @@ steps:
       kernel-url: https://github.com/JDev09/kernel_xiaomi_spes
       kernel-dir: msm-4.19
       kernel-branch: main-a16-sm8250-base
-
       config: vendor/spes-perf_defconfig
       arch: arm64
 
@@ -42,5 +41,5 @@ steps:
       anykernel3: true
       anykernel3-url: https://github.com/JDev09/AnyKernel3
 
-      # LLVM build
+      # LLVM
       extra-make-args: LLVM=1 LLVM_IAS=1
