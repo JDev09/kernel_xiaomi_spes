@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main-a16-sm8250-base-ksun-new
+      - main-a16-sm8250-base
 
 jobs:
   Build-Kernel:
