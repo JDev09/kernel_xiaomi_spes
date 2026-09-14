@@ -23,7 +23,7 @@ jobs:
           kernel-branch: main-a16-sm8250-base-ksu
           config: vendor/spes-perf_defconfig
           arch: arm64
-          aosp-gcc: true
+          aosp-gcc: false
           aosp-clang: true
           ksu-other: true
           ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
