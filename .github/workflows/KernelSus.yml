@@ -42,7 +42,7 @@ jobs:
           ksu: false
           ksu-other: true
           ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
-          ksu-version: legacy
+          ksu-version: main
           ksu-lkm: false
 
           # =========================
