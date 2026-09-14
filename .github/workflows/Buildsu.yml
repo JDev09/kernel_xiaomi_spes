@@ -1,4 +1,4 @@
-ame: Build KernelSU spes/n 4.19 BPF
+name: Build KernelSU spes/n 4.19 BPF
 on:
   workflow_dispatch:
   push:
