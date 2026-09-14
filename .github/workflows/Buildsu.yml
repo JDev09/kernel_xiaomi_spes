@@ -1,5 +1,5 @@
 # A simple action usage
-name: Build Kernel spes 4.19 BPF
+name: Build KernelSU spes 4.19 BPF
 on:
   workflow_dispatch:
   push:
