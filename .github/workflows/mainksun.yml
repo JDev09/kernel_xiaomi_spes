@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main-a16-sm8250-base-ksun
+      - main-a16-sm8250-ksun
 
 jobs:
   Build-Kernel:
@@ -20,7 +20,7 @@ jobs:
         with:
           kernel-url: https://github.com/JDev09/kernel_xiaomi_spes/
           kernel-dir: msm-4.19
-          kernel-branch: main-a16-sm8250-base-ksu
+          kernel-branch: main-a16-sm8250-ksun
           config: vendor/spes-perf_defconfig
           arch: arm64
           aosp-gcc: true
