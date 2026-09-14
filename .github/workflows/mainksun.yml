@@ -25,8 +25,8 @@ jobs:
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
-          aosp-clang-version: r596125
           ksu-other: true
+          aosp-clang-version: r596125
           ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
           anykernel3: true
           anykernel3-url: https://github.com/JDev09/AnyKernel3
