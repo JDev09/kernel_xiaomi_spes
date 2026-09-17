@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - kernel-spes/n-ksuN
+      - kernel-spes/n-ksun
 
 jobs:
   Build-Kernel:
@@ -20,7 +20,7 @@ jobs:
         with:
           kernel-url: https://github.com/JDev09/kernel_xiaomi_spes/
           kernel-dir: msm-4.19
-          kernel-branch: kernel-spes/n-ksuN
+          kernel-branch: kernel-spes/n-ksun
           config: vendor/spes-perf_defconfig
           arch: arm64
           aosp-gcc: true
