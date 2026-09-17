@@ -1,10 +1,10 @@
 # A simple action usage
-name: Build Kernel spes 4.19 BPF
+name: Build Kernel spes 4.19 BPF KSUN
 on:
   workflow_dispatch:
   push:
     branches:
-      - main-a16-sm8250-base
+      - kernel-spes/n-ksuN
 
 jobs:
   Build-Kernel:
@@ -15,19 +15,19 @@ jobs:
       contents: read
 
     steps:
-      - name: Build Kernel spes 4.19 BPF
+      - name: Build Kernel spes 4.19 BPF KSUN
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/muralivijay/kernel_xiaomi_spes/
+          kernel-url: https://github.com/JDev09/kernel_xiaomi_spes/
           kernel-dir: msm-4.19
-          kernel-branch: main-a16-sm8250-base
+          kernel-branch: kernel-spes/n-ksuN
           config: vendor/spes-perf_defconfig
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
-          ksu-other: false
+          ksu-other: true
           ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
           aosp-clang-version: r596125
           anykernel3: true
-          anykernel3-url: https://github.com/muralivijay/AnyKernel3
+          anykernel3-url: https://github.com/JDev09/AnyKernel3
           extra-make-args: LLVM=1 LLVM_IAS=1 KCFLAGS="-Wno-error" KCPPFLAGS="-Wno-error"
