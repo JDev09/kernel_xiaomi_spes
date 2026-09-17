@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main-a16-sm8250-base-ksun-new
+      - kernel-spes/n-ksun
 
 jobs:
   Build-Kernel:
@@ -18,9 +18,9 @@ jobs:
       - name: Build Kernel spes 4.19 BPF KSUN
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/muralivijay/kernel_xiaomi_spes/
+          kernel-url: hhttps://github.com/JDev09/kernel_xiaomi_spes
           kernel-dir: msm-4.19
-          kernel-branch: main-a16-sm8250-base-ksun-new
+          kernel-branch: kernel-spes/n-ksun
           config: vendor/spes-perf_defconfig
           arch: arm64
           aosp-gcc: true
@@ -29,5 +29,5 @@ jobs:
           ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
           aosp-clang-version: r596125
           anykernel3: true
-          anykernel3-url: https://github.com/muralivijay/AnyKernel3
-          extra-cmd: LLVM=1 LLVM_IAS=1
+          anykernel3-url: https://github.com/JDev09/AnyKernel3
+          extra-make-args: LLVM=1 LLVM_IAS=1
