@@ -30,4 +30,4 @@ jobs:
           aosp-clang-version: r596125
           anykernel3: true
           anykernel3-url: https://github.com/muralivijay/AnyKernel3
-          extra-cmd: LLVM=1 LLVM_IAS=1
+          extra-cmd: LLVM=1 LLVM_IAS=1 KCFLAGS="-Wno-error" KCPPFLAGS="-Wno-error"
