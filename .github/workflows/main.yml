@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main-a16-sm8250-base
+      - kernel-spes/n-ksun
 
 jobs:
   Build-Kernel:
@@ -18,9 +18,9 @@ jobs:
       - name: Build Kernel spes 4.19 BPF
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/muralivijay/kernel_xiaomi_spes/
+          kernel-url: https://github.com/JDev09/kernel_xiaomi_spes
           kernel-dir: msm-4.19
-          kernel-branch: main-a16-sm8250-base
+          kernel-branch: kernel-spes/n-ksun
           config: vendor/spes-perf_defconfig
           arch: arm64
           aosp-gcc: true
